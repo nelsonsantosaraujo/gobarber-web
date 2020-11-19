@@ -35,6 +35,8 @@ export const Container = styled.div<ContainerProps>`
       color: #ff9900;
     `}
 
+
+
   input {
     flex: 1;
     background: transparent;
@@ -43,6 +45,22 @@ export const Container = styled.div<ContainerProps>`
 
     &::placeholder {
       color: #666360;
+    }
+
+    /* Remove estilo do autocomplete */
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      border: 0;
+      -webkit-text-fill-color: #f4ede8;
+      -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+      transition: background-color 5000s ease-in-out 0s;
     }
   }
 
