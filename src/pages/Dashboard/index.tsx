@@ -116,15 +116,29 @@ const Dashboard: React.FC = () => {
   }, [selectedDate]);
 
   const morningAppointments = useMemo(() => {
-    return appointments.filter(appointment => {
-      return parseISO(appointment.date).getHours() < 12;
-    });
+    return appointments
+      .filter(appointment => {
+        return parseISO(appointment.date).getHours() < 12;
+      })
+      .sort((a, b) => {
+        return Number(
+          Number(a.hourFormatted.split(':')[0]) -
+            Number(b.hourFormatted.split(':')[0]),
+        );
+      });
   }, [appointments]);
 
   const afternoonAppointments = useMemo(() => {
-    return appointments.filter(appointment => {
-      return parseISO(appointment.date).getHours() >= 12;
-    });
+    return appointments
+      .filter(appointment => {
+        return parseISO(appointment.date).getHours() >= 12;
+      })
+      .sort((a, b) => {
+        return Number(
+          Number(a.hourFormatted.split(':')[0]) -
+            Number(b.hourFormatted.split(':')[0]),
+        );
+      });
   }, [appointments]);
 
   const nextAppointment = useMemo(() => {
