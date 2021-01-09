@@ -4,7 +4,7 @@ import { shade } from 'polished';
 import signUpBackgroundImg from '../../assets/sign-up-background.png';
 
 export const Container = styled.div`
-  height: 100vh;
+  height: 100%;
 
   display: flex;
   align-items: stretch;
@@ -39,7 +39,7 @@ export const AnimationContainer = styled.div`
   animation: ${appearFromRight} 1s;
 
   form {
-    margin: 80px 0;
+    margin: 80px 0 10px;
     width: 340px;
     text-align: center;
 
