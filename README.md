@@ -26,7 +26,7 @@ Para cadastro de agendamentos é necessário utilizar o cliente mobile
 
 ## 🚀 Tecnologias
 
-Abaixo as tecnologias utilizadas para construção da API
+Abaixo as tecnologias utilizadas para construção da aplicação web
 
 - [ReactJS](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
@@ -55,7 +55,7 @@ $ cd gobarber-web
 ### **Iniciando o projeto**
 
 ```bash
-# Rode yarn para instalar as dependências
+# Execute yarn para instalar as dependências
 $ yarn
 
 # Na raiz do projeto crie uma copia do arquivo .env.example
